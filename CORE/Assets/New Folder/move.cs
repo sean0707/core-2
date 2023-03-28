@@ -32,9 +32,11 @@ public class move : MonoBehaviour
     }
     void FixedUpdate()
     {
-       // Mode mode = Mode.move;
-
-        t = t - Time.deltaTime;
+        // Mode mode = Mode.move;
+        if (t > -1)
+        {
+            t = t - Time.deltaTime;
+        }
 
      //   if (Input.GetKeyDown(KeyCode.Mouse0))
      //   {

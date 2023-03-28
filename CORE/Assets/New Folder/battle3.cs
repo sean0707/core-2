@@ -24,9 +24,12 @@ public class battle3 : MonoBehaviour
     void Update()
     {
 
-        t = t - Time.deltaTime;
-        if(wepon.w == 3)
+        if (wepon.w == 3)
         {
+            if (t >= -3)
+            {
+                t = t - Time.deltaTime;
+            }
             if (Input.GetKeyDown(KeyCode.F1))
             {
                 t = 1;
@@ -51,6 +54,7 @@ public class battle3 : MonoBehaviour
         {
             weapon.GetComponent<MeshCollider>().enabled = false;
             effect.GetComponent<TrailRenderer>().enabled = false;
+            weapon.GetComponent<NewBehaviourScript7>().enabled = false;
             //   weapon.SetActive(false);
             if (Input.GetKey(KeyCode.W))
             {
@@ -102,21 +106,22 @@ public class battle3 : MonoBehaviour
             if (t < 1)
             {
                 weapon.GetComponent<MeshCollider>().enabled = true;
+                weapon.GetComponent<NewBehaviourScript7>().enabled = true;
             }
             // weapon.SetActive(true);
         }
-        if (t < -3)
+    /*    if (t < -3)
         {
             idol = true;
             HP.manager.getbot(1);
-            t = 0;
+          //  t = 0;
         }
         else
         {
             idol = false;
             HP.manager.getbot(0);
 
-        }
+        }*/
 
     }
 }

@@ -24,9 +24,13 @@ public class battle4 : MonoBehaviour
     {
 
 
-        t = t - Time.deltaTime;
         if (wepon.w == 4)
         {
+
+            if (t >= -3)
+            {
+                t = t - Time.deltaTime;
+            }
             if (Input.GetKeyDown(KeyCode.F1))
             {
                 t = 1;
@@ -105,18 +109,18 @@ public class battle4 : MonoBehaviour
             }
             // weapon.SetActive(true);
         }
-        if (t < -3)
+      /*  if (t < -3)
         {
             idol = true;
             HP.manager.getbot(1);
-            t = 0;
+        //    t = 0;
         }
         else
         {
             idol = false;
             HP.manager.getbot(0);
 
-        }
+        }*/
 
     }
 }

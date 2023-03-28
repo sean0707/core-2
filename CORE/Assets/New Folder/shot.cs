@@ -21,7 +21,10 @@ public class shot : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        t = t - Time.deltaTime;
+        if (t >= -1)
+        {
+            t = t - Time.deltaTime;
+        }
         if (wepon.w == 4)
         {
             if (Input.GetKeyDown(KeyCode.F1))
