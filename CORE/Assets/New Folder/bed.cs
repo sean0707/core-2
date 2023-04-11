@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class bed : MonoBehaviour
 {
-    public bool save;
 
     // Start is called before the first frame update
     void Start()
     {
-        save = true;
+
     }
 
     // Update is called once per frame
@@ -23,10 +22,10 @@ public class bed : MonoBehaviour
         {
             if (other.tag == "Player")
             {
-                if (save)
+                if (savedata.heal)
                 {
                     HP.manager.currentHealth = 100;
-                    save = !save;
+                    savedata.heal = !savedata.heal;
                 }
             }
         }

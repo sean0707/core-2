@@ -15,8 +15,6 @@ public class save : MonoBehaviour
     public bool check;
     public GameObject myObjArray;
     [SerializeField]
-    Text text;
-    [SerializeField]
     PlayerData data;
     [System.Serializable]
     public class PlayerData
@@ -32,13 +30,15 @@ public class save : MonoBehaviour
         public GameObject deta;
         public GameObject gameObject;
         public float X;
-        //  public float Y;
-        //   public float Z;
+        public float Y;
+        public float Z;
+        public float d1;
+        public float d2;
+        public float d3;
     }
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -78,8 +78,7 @@ public class save : MonoBehaviour
             sw.WriteLine(data.deta.transform.position.y);
             sw.WriteLine(data.deta.transform.position.z);
             sw.Close();
-            fs.Close(); 
-
+            fs.Close();
            }
         }
         

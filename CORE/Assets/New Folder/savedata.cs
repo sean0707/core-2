@@ -5,11 +5,12 @@ using UnityEngine;
 public static class savedata
 {
     public static bool check;
+    public static bool heal;
     public static bool savepoint;
     [SerializeField]
-    static PlayerData data;
+    public static PlayerData data;
     [System.Serializable]
-    public class PlayerData
+     public class PlayerData
     {
         public static string name;
         public static int hp;
@@ -19,6 +20,8 @@ public static class savedata
         public static int C;
         public static int D;
         public static string QUEST;
+        public static GameObject deta;
+        public static GameObject gameObject;
         public static float X;
         public static float Y;
         public static float Z;
@@ -28,7 +31,13 @@ public static class savedata
     }
     static savedata()
     {
+        heal = true;
+        //Debug.Log(data);
         // data = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("jsondata")); 
+    }
+    public static void savebyjson()
+    {
+        
     }
 
 }

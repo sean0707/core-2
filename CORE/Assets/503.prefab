@@ -144,7 +144,7 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: 53979f3daaea1bc429c85817d687dd32, type: 3}
+  - {fileID: 7400000, guid: 0440dd1d244f40747b3fa06088b8d265, type: 3}
   - {fileID: 7400000, guid: ee37c98a54ba40b498e4917c99910fc7, type: 3}
   - {fileID: 7400000, guid: ab0b2a6e695da2544bd8e530a85c4ea7, type: 3}
   - {fileID: 7400000, guid: 9be742d65d65ac74e90823d156c93081, type: 3}
@@ -1121,6 +1121,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: dame
       objectReference: {fileID: 0}
+    - target: {fileID: 1084215378257061511, guid: 469cfab18591bdb45b88dba3c25038b0,
+        type: 3}
+      propertyPath: m_text
+      value: '
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084215378257061511, guid: 469cfab18591bdb45b88dba3c25038b0,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4981865980556869790, guid: 469cfab18591bdb45b88dba3c25038b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1225,18 +1237,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084215378257061511, guid: 469cfab18591bdb45b88dba3c25038b0,
-        type: 3}
-      propertyPath: m_text
-      value: '
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1084215378257061511, guid: 469cfab18591bdb45b88dba3c25038b0,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469cfab18591bdb45b88dba3c25038b0, type: 3}
