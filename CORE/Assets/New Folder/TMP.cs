@@ -10,7 +10,9 @@ public class TMP : MonoBehaviour
     public static TMP ctrl;
     // TextMeshPro Text;
     public TextMeshProUGUI Text;
+    public TextMeshProUGUI TALK;
     public TextMeshProUGUI pt;
+    public TextAsset GG;
     public TextMeshProUGUI money;
     public bag bag;
     public coin coin;
@@ -78,15 +80,26 @@ public class TMP : MonoBehaviour
 
 
         }
+        if (quest.ctrl.M)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                ReadFile(GG.name);
+                TALK.text = Resources.Load<TextAsset>(GG.name).text;
+            }
+
+
+        }
     }
     void ReadFile(string Name)
     {
         strs = File.ReadAllLines(Name);
-        for (int i = 0; i < strs.Length; i++)
-        {
-            Str += strs[i];
-            Str += "\n";
-        }
+        Str += strs[0];
+          for (int i = 0; i < strs.Length; i++)
+          {
+              Str += strs[i];
+              Str += "\n";
+          }
     }
     public void getscore(int value)
     {
